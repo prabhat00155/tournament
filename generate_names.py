@@ -1,5 +1,6 @@
-import names
 import sys
+
+import names
 
 n = input('How many names you want to generate? ')
 try:
