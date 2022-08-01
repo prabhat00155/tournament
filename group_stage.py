@@ -26,6 +26,22 @@ def fetch_players(input_file):
     return names.strip().split('\n')
 
 
+def display(groups, as_csv=False):
+    if as_csv:
+        for group in sorted(groups.keys()):
+            print(f'Group {group}')
+            players = ','.join(groups[group])
+            print(f'Name,Wins,Losses,{players}')
+            for player in groups[group]:
+                print(player)
+            print()
+            print()
+    else:
+        for group in sorted(groups.keys()):
+            print(f'Group {group}')
+            print(groups[group])
+
+
 def main():
     group_size = input('Enter group size(5 by default): ')
     try:
@@ -40,10 +56,7 @@ def main():
 
     players = fetch_players(input_file)
     groups = assign_group(players, group_size)
-
-    for group in sorted(groups.keys()):
-        print(f'Group {group}')
-        print(groups[group])
+    display(groups, as_csv=True)
 
 
 if __name__ == "__main__":

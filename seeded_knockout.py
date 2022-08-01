@@ -37,7 +37,7 @@ def main():
         sys.exit()
     matchup = create_matches(num)
     for match in matchup:
-        print(f'Group {match[0]} winner vs Group {match[1]} runners-up')
+        print(f'Group {match[0]} winner\nvs\nGroup {match[1]} runner-up')
 
 
 if __name__ == "__main__":
