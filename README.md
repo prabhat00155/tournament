@@ -18,4 +18,7 @@ To create a seeded knockout stage where group winners play runner's up from othe
 ```
 python seeded_knockout.py
 ```
-
+To create doubles teams from a list of contestants, run:
+```
+python make_team.py
+```
